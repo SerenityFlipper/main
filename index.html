@@ -1,10 +1,120 @@
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="/media/icon.png">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>SimpleBio</title>
+
+    <style>
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0 50%;
+            }
+        }
+
+        body {
+            animation: gradientAnimation 10s ease infinite;
+            background: linear-gradient(-45deg, #181718, #121212, #000000, #3f1a7a);
+            background-size: 400% 400%;
+        }
+
+        a {
+            transition: all 0.3s ease-in-out;
+        }
+        a:hover {
+            border-color: #9c00ff;
+        }
+
+        .box {
+            padding: 15px;
+            background-color: #121212;
+            border-radius: 10px;
+            border: 2px solid #181718;
+            display: inline-block;
+            width: 200px;
+            margin: 10px;
+            text-align: center;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .box h1 {
+            color: #808080;
+            font-size: large;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .box:hover {
+            background-color: #1F1F1F;
+        }
+
+        @media only screen and (max-width: 480px) {
+            .box {
+                opacity: 0;
+            }
+
+            .flex {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .space-x-40 {
+                margin: 0;
+            }
+
+            .title {
+                position: fixed;
+            }
+        }
+    </style>
 </head>
-<body>
-<h1>Hello World</h1>
+<body class="bg-black text-white select-none relative overflow-hidden">
+<div class="flex flex-row space-x-40 items-center w-screen h-screen justify-center">
+    <div class="flex-col flex title">
+        <h1 class="text-4xl bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-transparent bg-clip-text">
+            Serenity Flipper</h1>
+        <p>Click below to get started!</p>
+        <div class="flex-col mt-6 space-x-5">
+            <a href="app/index.html" class="p-2 rounded-md border-2 border-purple-500">Get Started</a>
+            <a href="https://discord.gg/mg4Z5pnxh5" target="_blank" class="p-2 rounded-md border-2 border-purple-500"><i
+                    class="fa-brands fa-discord"></i> Discord</a>
+        </div>
+    </div>
+    <div class="space-x-3 space-y-3 flex-col items-center">
+        <div class="flex flex-row">
+            <div class="box">
+                <h1>Total Users</h1>
+                <p id="load-total-users">Loading</p>
+            </div>
+            <div class="box">
+                <h1>Total Views</h1>
+                <p id="load-total-views">Loading</p>
+            </div>
+        </div>
+        <div class="box">
+            <h1>Version</h1>
+            <p id="load-version">Loading</p>
+        </div>
+        <div class="box">
+            <h1>Api Status</h1>
+            <p id="load-api-status">Loading</p>
+        </div>
+    </div>
+</div>
+
+
 </body>
 </html>
