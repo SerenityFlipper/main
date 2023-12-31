@@ -1,0 +1,61 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="../media/icon.png">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Home | Serenity Flipper</title>
+
+    <style>
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0 50%;
+            }
+        }
+
+        body {
+            animation: gradientAnimation 10s ease infinite;
+            background: linear-gradient(-45deg, #181718, #121212, #000000, #3f1a7a);
+            background-size: 400% 400%;
+        }
+
+        @media (max-width: 768px) {
+            .main-section {
+                max-width: 80%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-black text-white select-none relative overflow-hidden">
+<div class="fixed top-0 left-0 w-screen h-20 bg-transparent flex items-center justify-between px-3">
+    <h1 class="text-4xl bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 text-transparent bg-clip-text">Simple Bio</h1>
+    <div class="space-x-4">
+        <a href="#" class="text-white hover:text-blue-400 transition-all"><i
+                class="fas fa-sign-in-alt"></i> Login</a>
+        <a href="#" class="text-white hover:text-blue-400 transition-all"><i
+                class="fas fa-user-plus"></i> Register</a>
+    </div>
+</div>
+
+<div class="main-section mx-auto mt-20 h-screen flex flex-col justify-center items-center">
+    <h2 class="text-3xl font-bold mb-6">Welcome to Simple Bio!</h2>
+    <p class="text-lg leading-relaxed">Create your personal bio with ease and share your story with the world. Simple Bio provides a user-friendly platform to craft and manage your bio effortlessly.</p>
+    <p class="text-lg leading-relaxed mt-4">Get started now to build your unique biography and connect with others.</p>
+</div>
+</body>
+</html>
